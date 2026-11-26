@@ -1,0 +1,45 @@
+
+compiled_hex/test_branch.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00500093          	li	ra,5
+   4:	00500113          	li	sp,5
+   8:	fff00193          	li	gp,-1
+   c:	00000513          	li	a0,0
+  10:	00208463          	beq	ra,sp,18 <L1>
+  14:	00150513          	addi	a0,a0,1
+
+00000018 <L1>:
+  18:	00209463          	bne	ra,sp,20 <L2>
+  1c:	00250513          	addi	a0,a0,2
+
+00000020 <L2>:
+  20:	0011c463          	blt	gp,ra,28 <L3>
+  24:	00450513          	addi	a0,a0,4
+
+00000028 <L3>:
+  28:	0011e463          	bltu	gp,ra,30 <L4>
+  2c:	00850513          	addi	a0,a0,8
+
+00000030 <L4>:
+  30:	0030d463          	bge	ra,gp,38 <L5>
+  34:	01050513          	addi	a0,a0,16
+
+00000038 <L5>:
+  38:	0030f463          	bgeu	ra,gp,40 <L6>
+  3c:	02050513          	addi	a0,a0,32
+
+00000040 <L6>:
+  40:	00c002ef          	jal	t0,4c <func>
+  44:	04050513          	addi	a0,a0,64
+  48:	00c0006f          	j	54 <done>
+
+0000004c <func>:
+  4c:	08050513          	addi	a0,a0,128
+  50:	00028067          	jr	t0
+
+00000054 <done>:
+  54:	0000006f          	j	54 <done>

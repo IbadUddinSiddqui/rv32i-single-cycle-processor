@@ -1,0 +1,15 @@
+build/
+quartus/output_files/
+quartus/db/
+quartus/incremental_db/
+*.vvp
+*.elf
+*.wlf
+*.vstf
+transcript
+work/
+modelsim.ini
+RISC_V_Report_Output/
+
+# Quartus-generated
+quartus/c5_pin_model_dump.txt

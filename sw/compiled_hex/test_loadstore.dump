@@ -1,0 +1,30 @@
+
+compiled_hex/test_loadstore.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	123450b7          	lui	ra,0x12345
+   4:	67808093          	addi	ra,ra,1656 # 12345678 <__global_pointer$+0x12343e24>
+   8:	04102023          	sw	ra,64(zero) # 40 <_start+0x40>
+   c:	04002183          	lw	gp,64(zero) # 40 <_start+0x40>
+  10:	04000203          	lb	tp,64(zero) # 40 <_start+0x40>
+  14:	04300283          	lb	t0,67(zero) # 43 <_start+0x43>
+  18:	fff00313          	li	t1,-1
+  1c:	04600223          	sb	t1,68(zero) # 44 <_start+0x44>
+  20:	04400383          	lb	t2,68(zero) # 44 <_start+0x44>
+  24:	04404403          	lbu	s0,68(zero) # 44 <_start+0x44>
+  28:	04402483          	lw	s1,68(zero) # 44 <_start+0x44>
+  2c:	ffe00513          	li	a0,-2
+  30:	04a01423          	sh	a0,72(zero) # 48 <_start+0x48>
+  34:	04801583          	lh	a1,72(zero) # 48 <_start+0x48>
+  38:	04805603          	lhu	a2,72(zero) # 48 <_start+0x48>
+  3c:	04101523          	sh	ra,74(zero) # 4a <_start+0x4a>
+  40:	04802683          	lw	a3,72(zero) # 48 <_start+0x48>
+  44:	04a01703          	lh	a4,74(zero) # 4a <_start+0x4a>
+  48:	041006a3          	sb	ra,77(zero) # 4d <_start+0x4d>
+  4c:	04c02783          	lw	a5,76(zero) # 4c <_start+0x4c>
+
+00000050 <end>:
+  50:	0000006f          	j	50 <end>

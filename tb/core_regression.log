@@ -1,0 +1,96 @@
+transcript on
+
+restart -f
+# Closing VCD file "tb/waves/tb_core.vcd"
+run -all
+# ---- sw/compiled_hex/test_alu.hex : executed 60 cycles, PC = 0x00000068 ----
+#   PASS x1 = 0x00000005
+#   PASS x2 = 0xfffffffd
+#   PASS x3 = 0x00000002
+#   PASS x4 = 0x00000008
+#   PASS x5 = 0x00000005
+#   PASS x6 = 0xfffffffd
+#   PASS x7 = 0xfffffff8
+#   PASS x8 = 0x00000001
+#   PASS x9 = 0x00000000
+#   PASS x10 = 0x00000050
+#   PASS x11 = 0x0000000f
+#   PASS x12 = 0xffffffff
+#   PASS x13 = 0x00000003
+#   PASS x14 = 0x00000028
+#   PASS x15 = 0x1fffffff
+#   PASS x16 = 0xffffffff
+#   PASS x17 = 0x00000001
+#   PASS x18 = 0x00000001
+#   PASS x19 = 0x000000fa
+#   PASS x20 = 0x00000075
+#   PASS x21 = 0x0000000d
+#   PASS x22 = 0x12345000
+#   PASS x23 = 0x00001058
+#   PASS x24 = 0x12345678
+#   PASS x25 = 0x00000000
+#   PASS x0 = 0x00000000
+# ==> test_alu : PASSED
+# 
+# ---- sw/compiled_hex/test_loop.hex : executed 100 cycles, PC = 0x0000002c ----
+#   PASS x10 = 0x00000037
+#   PASS x11 = 0x0000000b
+#   PASS x13 = 0x00000000
+#   PASS x14 = 0x00000014
+# ==> test_loop : PASSED
+# 
+# ---- sw/compiled_hex/test_loadstore.hex : executed 40 cycles, PC = 0x00000050 ----
+#   PASS x1 = 0x12345678
+#   PASS x3 = 0x12345678
+#   PASS x4 = 0x00000078
+#   PASS x5 = 0x00000012
+#   PASS x6 = 0xffffffff
+#   PASS x7 = 0xffffffff
+#   PASS x8 = 0x000000ff
+#   PASS x9 = 0x000000ff
+#   PASS x10 = 0xfffffffe
+#   PASS x11 = 0xfffffffe
+#   PASS x12 = 0x0000fffe
+#   PASS x13 = 0x5678fffe
+#   PASS x14 = 0x00005678
+#   PASS x15 = 0x00007800
+#   PASS dmem[addr 0x00000040] = 0x12345678
+#   PASS dmem[addr 0x00000044] = 0x000000ff
+#   PASS dmem[addr 0x00000048] = 0x5678fffe
+#   PASS dmem[addr 0x0000004c] = 0x00007800
+# ==> test_loadstore : PASSED
+# 
+# ---- sw/compiled_hex/test_branch.hex : executed 50 cycles, PC = 0x00000054 ----
+#   PASS x10 = 0x000000ea
+#   PASS x5 = 0x00000044
+# ==> test_branch : PASSED
+# 
+# ---- sw/compiled_hex/test_system.hex : executed 120 cycles, PC = 0x00000080 ----
+#   PASS x1 = 0x00000084
+#   PASS x3 = 0x00000000
+#   PASS x4 = 0x00000055
+#   PASS x6 = 0x00000055
+#   PASS x8 = 0x0000005f
+#   PASS x9 = 0x0000004e
+#   PASS x10 = 0x0000004e
+#   PASS x11 = 0x00000015
+#   PASS x12 = 0x0000001f
+#   PASS x13 = 0x0000001c
+#   PASS x14 = 0x00000007
+#   PASS x22 = 0x00000002
+#   PASS x25 = 0x00000002
+#   PASS x26 = 0x40000100
+#   PASS x28 = 0x0000006c
+#   PASS x29 = 0x0000000b
+#   PASS x15 = 0x00000003
+#   PASS x16 = 0x0000007c
+#   PASS x17 = 0x00000002
+#   PASS x19 = 0x0000000e
+#   PASS x18 = 0x00000063
+# ==> test_system : PASSED
+# 
+##### ALL CORE TESTS PASSED #####
+# ** Note: $finish    : tb/tb_core.v(109)
+#    Time: 3800 ns  Iteration: 1  Instance: /tb_core
+# 1
+# Break in Module tb_core at tb/tb_core.v line 109
